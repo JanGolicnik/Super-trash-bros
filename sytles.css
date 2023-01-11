@@ -1,0 +1,186 @@
+* {
+  padding: 0;
+  margin: 0;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+  text-decoration: none;
+  font-family: "Arial";
+  color: #0d172a;
+}
+
+body {
+  overflow: hidden;
+}
+
+button {
+  z-index: 5;
+  font-size: 4rem;
+  position: fixed;
+  background-color: rgb(255, 254, 197);
+  border: 0;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  padding: 3rem 4rem;
+}
+
+.stylediv {
+  font-size: 4rem;
+  display: fixed;
+  background-color: rgb(255, 254, 197);
+  width: min-content;
+  border-radius: 1.5rem;
+  padding: 1.5rem 2.5rem;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #1e293b;
+}
+
+.flex {
+  display: flex;
+}
+
+.moveonhover:hover {
+  transform: translate(2rem, 0);
+}
+
+#startbtn {
+  margin-left: 5rem;
+  margin-top: 4rem;
+}
+#exitbtn {
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+#settingbtn {
+  margin-left: 5rem;
+  margin-top: 15rem;
+}
+
+#mapbtn {
+  margin-left: 5rem;
+  margin-top: 26rem;
+}
+
+#setupcontrolsbtn {
+  margin-left: 5rem;
+  margin-top: 37rem;
+}
+
+#resetcontrolsbtn {
+  margin-left: 5rem;
+  margin-top: 48rem;
+}
+
+#map1btn {
+  margin-left: 60rem;
+  margin-top: 10rem;
+}
+
+#map2btn {
+  margin-left: 70rem;
+  margin-top: 25rem;
+}
+
+#map3btn {
+  margin-left: 80rem;
+  margin-top: 40rem;
+}
+
+#deaths1btn {
+  font-size: 1rem;
+  margin-left: 80rem;
+  margin-top: 15rem;
+  padding: 2rem 3rem;
+}
+
+#deaths5btn {
+  font-size: 1rem;
+  margin-left: 65rem;
+  margin-top: 15rem;
+  padding: 2rem 3rem;
+}
+
+#deaths10btn {
+  font-size: 1rem;
+  margin-left: 50rem;
+  margin-top: 15rem;
+  padding: 2rem 3rem;
+}
+
+#volumeslider {
+  margin-left: 70rem;
+  margin-top: 25rem;
+}
+
+#volumesliderlabel {
+  margin-top: -5rem;
+  margin-left: 50rem;
+}
+
+#canvasdiv {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  z-index: -2;
+  background-color: rgb(77, 87, 103);
+}
+#canvas {
+  z-index: -1;
+  position: absolute;
+}
+
+#p1controls {
+  position: fixed;
+  margin-left: 50rem;
+  margin-top: 10rem;
+  gap: 1rem;
+}
+
+#p2controls {
+  position: fixed;
+  margin-left: 50rem;
+  margin-top: 25rem;
+  gap: 1rem;
+}
+
+#resetcontrolsbtn {
+  margin-left: 70rem;
+  margin-top: 40rem;
+}
+
+.controlbutton {
+  font-size: 1.2rem;
+  position: relative;
+  display: flex;
+}
+
+.slidein {
+  transform: translate(0rem, 0);
+}
+.slideout {
+  transform: translate(150rem, 0);
+}
+
+.shown {
+  display: fixed;
+}
+.hidden {
+  display: none;
+}
+
+.colorp1 {
+  background-color: #f04324;
+}
+.colorp2 {
+  background-color: #249bf0;
+}

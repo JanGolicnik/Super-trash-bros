@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="javascript.js" defer></script>
+    <link rel="stylesheet" href="sytles.css" />
+    <link rel="stylesheet" href="sliderstyle.css" />
+    <title>Game</title>
+  </head>
+  <body>
+    <button id="startbtn" class="hideonstart moveonhover" onclick="start();">
+      start
+    </button>
+    <button id="exitbtn" class="showonstart hidden" onclick="running=false;">
+      exit
+    </button>
+
+    <button
+      id="settingbtn"
+      class="hideonstart moveonhover"
+      onclick="togglechoosemap(0); togglecontrols(0);togglesettings(-1);"
+    >
+      settings
+    </button>
+
+    <button
+      id="mapbtn"
+      class="hideonstart moveonhover"
+      onclick="togglesettings(0);togglecontrols(0); togglechoosemap(-1)"
+    >
+      select map
+    </button>
+
+    <button
+      id="setupcontrolsbtn"
+      class="hideonstart moveonhover"
+      onclick="togglesettings(0);togglechoosemap(0); togglecontrols(-1);"
+    >
+      controls
+    </button>
+
+    <button
+      id="map1btn"
+      class="choosemap slideout hideonstart"
+      onclick="loadMap1()"
+    >
+      map1
+    </button>
+    <button
+      id="map2btn"
+      class="choosemap slideout hideonstart"
+      onclick="loadMap2()"
+    >
+      map2
+    </button>
+    <button
+      id="map3btn"
+      class="choosemap slideout hideonstart"
+      onclick="loadMap3()"
+    >
+      map3
+    </button>
+
+    <button
+      id="deaths1btn"
+      class="choosesettings slideout hideonstart"
+      onclick="maxDeaths=1;"
+    >
+      1 death
+    </button>
+
+    <button
+      id="deaths5btn"
+      class="choosesettings slideout hideonstart"
+      onclick="maxDeaths=5;"
+    >
+      5 deaths
+    </button>
+
+    <button
+      id="deaths10btn"
+      class="choosesettings slideout hideonstart"
+      onclick="maxDeaths=10;"
+    >
+      10 deaths
+    </button>
+
+    <div
+      id="p1controls"
+      class="colorp1 flex hideonstart stylediv choosecontrols slideout"
+    >
+      <button
+        class="controlbutton hideonstart"
+        onclick="controlscheme.p1Jump = getInput();  saveInput();"
+      >
+        jump
+      </button>
+
+      <button
+        class="controlbutton hideonstart"
+        onclick="controlscheme.p1Left = getInput();  saveInput();"
+      >
+        left
+      </button>
+
+      <button
+        class="controlbutton hideonstart"
+        onclick="controlscheme.p1Right = getInput();  saveInput();"
+      >
+        right
+      </button>
+
+      <button
+        class="controlbutton hideonstart"
+        onclick="controlscheme.p1Down = getInput();  saveInput();"
+      >
+        down
+      </button>
+
+      <button
+        class="controlbutton hideonstart"
+        onclick="controlscheme.p1Attack = getInput();  saveInput();"
+      >
+        attack
+      </button>
+    </div>
+
+    <div
+      id="p2controls"
+      class="colorp2 flex hideonstart stylediv choosecontrols slideout"
+    >
+      <button
+        class="controlbutton hideonstart"
+        onclick="controlscheme.p2Jump = getInput();  saveInput();"
+      >
+        jump
+      </button>
+
+      <button
+        class="controlbutton hideonstart"
+        onclick="controlscheme.p2Left = getInput();  saveInput();"
+      >
+        left
+      </button>
+
+      <button
+        class="controlbutton hideonstart"
+        onclick="controlscheme.p2Right = getInput();  saveInput();"
+      >
+        right
+      </button>
+
+      <button
+        class="controlbutton hideonstart"
+        onclick="controlscheme.p2Down = getInput();  saveInput();"
+      >
+        down
+      </button>
+
+      <button
+        class="controlbutton hideonstart"
+        onclick="controlscheme.p2Attack = getInput(); saveInput();"
+      >
+        attack
+      </button>
+    </div>
+
+    <button
+      id="resetcontrolsbtn"
+      class="choosecontrols slideout hideonstart"
+      onclick="resetControls();"
+    >
+      reset
+    </button>
+
+    <input
+      type="range"
+      min="1"
+      max="100"
+      value="50"
+      class="slider choosesettings slideout hideonstart"
+      id="volumeslider"
+      name="volumeslider"
+      oninput="volumeinput(this)"
+    />
+    <div
+      id="volumesliderlabel"
+      class="choosesettings slideout hideonstart stylediv"
+    >
+      <p class="choosesettings slideout hideonstart">volume</p>
+    </div>
+
+    <div id="canvasdiv">
+      <canvas id="canvas"></canvas>
+    </div>
+  </body>
+</html>
